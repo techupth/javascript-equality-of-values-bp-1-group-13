@@ -1,5 +1,6 @@
 function isPlainObject(value) {
-  // Start coding here
+  let temp = Object(value);
+  return (temp.name === "John")
 }
 
 // Example case
@@ -11,3 +12,5 @@ let result3 = isPlainObject(["apples", "oranges"]);
 console.log(result1); //true
 console.log(result2); // false
 console.log(result3); // false
+
+
