@@ -1,17 +1,9 @@
 function isPlainObject(value) {
-
-  if(typeof(value) === "object"){
-    if (Array.isArray(value) === true || value === null){
-      return false
-    }
-    else {
-      return true
-    }
-  }
-  else {
-    return "This is not an object"
-  }
-
+  let result  = Array.isArray(value) !== true && value !== null && typeof(value) === "object";
+  let unObject = typeof(value) !== "object" && "this is not object"
+  
+  return result || unObject
+  
 }
 
 // Example case
@@ -27,5 +19,6 @@ console.log(result2); // false
 console.log(result3); // false
 console.log(result4);
 console.log(result5);
+
 
 
